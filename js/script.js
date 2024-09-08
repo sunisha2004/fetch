@@ -11,7 +11,7 @@
 
             str += `
              <div class="cards">
-            <a href="">
+            <a href="../pages/detail.html?id=${product.id}">
                 <div class="image">
                     <img src="${product.thumbnail}" alt="no image">
                 </div>

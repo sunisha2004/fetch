@@ -1,25 +1,33 @@
 *{
     margin: 0;
 }
-body{
-    background-image: url(https://img.freepik.com/free-photo/old-black-background-grunge-texture-dark-wallpaper-blackboard-chalkboard-room-wall_1258-28313.jpg?w=1380&t=st=1725643382~exp=1725643982~hmac=c0bbc10460ff554e4626f090fc9ce6fd9c40cf2b5bf253bf8d6dee2096ccc88f);
-    background-size: cover;
-    background-repeat: no-repeat;
-}
+
 .navbar{
     width: 100%;
-    height: 5rem;
-    background-color: black;
+    height: 6rem;
+    background-color: yellowgreen;
 }
 .subdiv a{
-    color: yellowgreen;
+    color: white;
+    margin-left: 65px;
+    padding-left: 90px;
+    font-size: 18px;
+    text-decoration: none;
+    font-family:cursive;
+    margin-bottom: 15px;
+}
+input{
     margin-left: 100px;
-    padding-left: 75px;
+    text-align: center;
+    height: 20px;
+    width: 250px;
 }
 .subdiv h2{
-    color: yellowgreen;
+    color:white;
     text-align: center;
     font-size: 32px;
+    font-family: cursive;
+
 }
 .container{
     display: flex;
@@ -29,22 +37,24 @@ body{
 .cards{
     width: 14rem;
     height: 24rem;
-    border: 1px solid yellowgreen;
+    border: 5px solid yellowgreen;
     margin-top: 2rem;
     margin: 20px;
+    border-radius: 40px;
+    object-fit: cover;
+    background-position: center;
 }
 .image{
     width: 100%;
     height: 60%;
-    /* background-color: blanchedalmond; */
+
 }
 .image img{
     width: 100%;
-
 }
 a{
     text-decoration: none;
-    color:white;
+    color:black;
     font-size: 15px;
     text-align: center;
 }
@@ -68,7 +78,11 @@ button{
 }
 .cards:hover{
 border: 10px solid yellowgreen;
-width: 240px;
+width: 260px;
+transition: 0.5s;
+height: 25rem;
 
 }
+
+
 

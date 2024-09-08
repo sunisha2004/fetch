@@ -1,0 +1,124 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.navbar{
+    width: 100%;
+    height: 6rem;
+    background-color: yellowgreen;
+}
+input{
+    margin-left: 100px;
+    text-align: center;
+    height: 20px;
+    width: 250px;
+}
+.subdiv a{
+    color: white;
+    margin-left: 65px;
+    padding-left: 90px;
+    font-size: 18px;
+    text-decoration: none;
+    font-family:cursive;
+    margin-bottom: 15px;
+    
+}
+.subdiv h2{
+    color:white;
+    text-align: center;
+    font-size: 32px;
+}
+
+#container1{
+    width: 100%;
+    height: 350px;
+    /* border: 2px solid yellowgreen; */
+    display: flex;
+
+    
+}
+#image{
+    width: 28rem;
+    height: 450px;
+    margin-left: 300px;
+    /* margin-top: 20px */
+    border: 1px solid cornsilk;
+    box-shadow:rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    /* background-color: aqua; */
+    /* margin-bottom: 100px; */
+}
+#subimg{
+    width: 10rem;
+    height: 10rem;
+    display: flex;
+    flex-direction: column;
+}
+#subimgs{
+width: 100%;
+height: 8rem;
+border: 1px solid cornsilk;
+margin-left: 15px;
+margin-top: 15px;
+box-shadow:rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+#img1{
+    width: 30rem;
+    height: 25rem;
+    /* margin-bottom: 100px; */
+}
+#productDetails{
+    /* width: 100%; */
+    height: 250px;
+    margin-top: 100px;
+    font-size: 40px;
+    font-family:cursive;
+    margin-left: 100px;
+}
+button{
+    width: 12rem;
+    height: 50px;
+     justify-content: center; 
+     align-content: center;
+    /* margin-bottom: 300px; */
+    border: none;
+}
+#btns{
+    display: flex;
+    gap: 15px;
+    height: 10rem;
+    width:22rem;
+    /* background-color: aqua; */
+    margin-left: 800px;
+    margin-bottom: 200px;
+}
+#add{
+    background-color:orange;
+    color: white;
+    /* margin-left: 100px; */
+}
+#buy{
+    /* margin-left: 600px; */
+    background-color: green;
+    color: white;
+}
+#brand{
+    color: grey;
+    font-size: 30px;
+}
+#title{
+    color: red;
+    font-size: 33px;
+}
+#price{
+    color: orange;
+    font-size: 35px;
+}
+#offer{
+    color: green;
+    font-size:36px ;
+}
+#rating{
+    font-size: 16px;
+    color: blueviolet;
+}
