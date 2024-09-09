@@ -8,21 +8,26 @@ async function getDetails() {
     const res=await fetch(`https://dummyjson.com/products/${id}`);
     const data=await res.json()
     console.log(data);
+
+    const originalPrice = calculateOriginalPrice(data.price, data.discountPercentage);
+
+    let img=``
+    data.images.map((image)=>{
+        img+=`<img src=${image} alt="no image" onmouseover="changePic('${image}')"/>`
+    })
+    document.getElementById("images").innerHTML=img
     document.getElementById("container").innerHTML=`
-    <div id="subimg">
-    <img id="subimgs" src="${data.images[0]}" alt="">
-    <img id="subimgs" src="${data.images[1]}" alt="">
-    <img id="subimgs" src="${data.images[2]}" alt="">
-    </div>
     <div id="container1"> 
-    <div id="image">
+        <div id="image">
             <img id="img1" src="${data.thumbnail}" alt="">
         </div>
         <div id="productDetails">
             <div id="brand">${data.brand}</div>
             <div id="title">${data.title}</div>
-            <div id="price">Rs.${data.price}</div>
-            <div id="offer">${data.discountPercentage}%offer</div>
+            <div id="originalPrice">Rs.<del>${originalPrice.toFixed(2)}</del></div>
+           <div id="price">Rs.${data.price}</div>
+           
+            <div id="offer">${data.discountPercentage}% offer</div>
              <div id="rating">Rating : ${data.rating}</div>
 
         </div>
@@ -36,3 +41,12 @@ async function getDetails() {
     
 }
 getDetails()
+
+function changePic(image){
+    console.log(image);
+    document.getElementById("img1").src=image;
+    
+}
+function calculateOriginalPrice(discountedPrice, offerPercentage) {
+    return discountedPrice / (1 - (offerPercentage / 100));
+}

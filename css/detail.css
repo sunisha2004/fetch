@@ -1,127 +1,273 @@
-*{
+ *{
     margin: 0;
     padding: 0;
 }
 
-.navbar{
-    width: 100%;
-    height: 6rem;
+.navbar {
     background-color: yellowgreen;
+    font-family:cursive
 }
-input{
-    margin-left: 100px;
+#txt1{
     text-align: center;
-    height: 20px;
-    width: 250px;
-}
-.subdiv a{
+    justify-content: space-between;
     color: white;
-    margin-left: 65px;
-    padding-left: 90px;
-    font-size: 18px;
-    text-decoration: none;
-    font-family:cursive;
-    margin-bottom: 15px;
-    
-}
-.subdiv h2{
-    color:white;
-    text-align: center;
-    font-size: 32px;
+    font-size: 40px;
 }
 
-#container1{
-    width: 100%;
-    height: 350px;
-    /* border: 2px solid yellowgreen; */
+.navbar #subdiv {
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
 
-    
+.navbar #subdiv a {
+    color: white;
+    text-decoration: none;
+    padding: 15px 15px;
+    transition: background 0.3s;
+    font-size: 20px;
 }
-#image{
-    width: 28rem;
-    height: 450px;
-    margin-left: 300px;
-    /* margin-top: 20px */
-    border: 1px solid cornsilk;
-    box-shadow:rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
-    /* background-color: aqua; */
-    /* margin-bottom: 100px; */
+
+.navbar #subdiv a:hover {
+    background-color: white;
+    border-radius: 5px;
+    color: green;
 }
-#subimg{
-    width: 10rem;
-    height: 10rem;
+
+#images {
     display: flex;
     flex-direction: column;
-}
-#subimgs{
-width: 100%;
-height: 8rem;
-border: 1px solid cornsilk;
-margin-left: 15px;
-margin-top: 15px;
-box-shadow:rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
-}
-#img1{
-    width: 30rem;
-    height: 25rem;
-    /* margin-bottom: 100px; */
-}
-#productDetails{
-    /* width: 100%; */
-    height: 250px;
-    margin-top: 100px;
-    font-size: 40px;
-    font-family:cursive;
-    margin-left: 100px;
-}
-button{
-    width: 12rem;
-    height: 50px;
-     justify-content: center; 
-     align-content: center;
-    /* margin-bottom: 300px; */
-    border: none;
-}
-#btns{
-    display: flex;
-    gap: 15px;
-    height: 10rem;
-    width:22rem;
-    /* background-color: aqua; */
-    margin-left: 800px;
-    margin-bottom: 200px;
-}
-#add{
-    background-color:orange;
-    color: white;
-    /* margin-left: 100px; */
-}
-#buy{
-    /* margin-left: 600px; */
-    background-color: green;
-    color: white;
-}
-#brand{
-    color: grey;
-    font-size: 30px;
-}
-#title{
-    color: red;
-    font-size: 33px;
-}
-#price{
-    color: orange;
-    font-size: 35px;
-}
-#offer{
-    color: green;
-    font-size:36px ;
-}
-#rating{
-    font-size: 16px;
-    color: blueviolet;
+    gap: 10px;
+    margin: 20px;
 }
 
+#images img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    cursor: pointer;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    transition: transform 0.3s, border-color 0.3s;
+}
+
+#images img:hover {
+    transform: scale(1.1);
+    border-color: yellowgreen;
+}
+.main{
+    display: flex;
+    justify-content: space-between;
+}
+#container {
+    max-width: 1500px;
+    background-color: #f9f9f9;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    margin-top: 15px;
+}
+#container1{
+    display: flex;
+    margin-left: 300px;
+}
+
+#image {
+    width: 50%;
+
+}
+
+#image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border: 2px solid #ddd;
+}
+
+#productDetails {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.5;
+    margin-left: 50px;
+    margin-top: 120px;
+}
+
+#brand {
+    font-size: 24px;
+    color: gray;
+    margin-bottom: 10px;
+}
+
+#title {
+    font-size: 40px;
+    color: red;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+#price {
+    font-size: 28px;
+    color: orange;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+#offer {
+    font-size: 24px;
+    color: green;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+#rating {
+    font-size: 20px;
+    color: blueviolet;
+    margin-bottom: 20px;
+}
+
+#btns {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+    margin-left: 360px;
+}
+
+button {
+    width: 150px;
+    height: 45px;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#buy {
+    background-color: green;
+}
+
+#buy:hover {
+    background-color: darkgreen;
+}
+
+#add {
+    background-color: orange;
+}
+
+#add:hover {
+    background-color: darkorange;
+}
+#originalPrice{
+    font-size: 22px;
+    color: gray;
+}
+
+
+/* Responsive CSS */
+
+/* For tablets and smaller desktops (screen width less than 1024px) */
+@media (max-width: 1024px) {
+    /* Navbar adjustments */
+    .navbar #subdiv {
+        flex-direction: column;
+    }
+
+    .navbar #subdiv a {
+        padding: 10px;
+        font-size: 18px;
+    }
+
+    /* Image and Product Details adjustments */
+    #container1 {
+        flex-direction: column;
+        align-items: center;
+        margin-left: 0;
+        text-align: center;
+    }
+
+    #image {
+        width: 90%;
+    }
+
+    #productDetails {
+        margin-left: 0;
+        margin-top: 30px;
+    }
+
+    #btns {
+        margin-left: 0;
+        justify-content: center;
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    
+    #txt1 {
+        font-size: 32px;
+    }
+
+    .navbar #subdiv {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    #images img {
+        width: 100px;
+        height: 100px;
+    }
+
+    #container1 {
+        flex-direction: column;
+        margin-left: 0;
+        text-align: center;
+    }
+
+    #image {
+        width: 100%;
+    }
+
+    #image img {
+        height: auto;
+    }
+
+    #productDetails {
+        margin-top: 20px;
+        text-align: center;
+        font-size: 16px;
+    }
+
+    #brand {
+        font-size: 18px;
+    }
+
+    #title {
+        font-size: 28px;
+    }
+
+    #price {
+        font-size: 24px;
+    }
+
+    #offer {
+        font-size: 20px;
+    }
+
+    #rating {
+        font-size: 18px;
+    }
+
+    #btns {
+        flex-direction: column;
+        gap: 10px;
+        margin-left: 0;
+        width: 100%;
+    }
+
+    button {
+        width: 100%;
+    }
+}
 
 
