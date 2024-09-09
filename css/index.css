@@ -43,6 +43,7 @@ input{
     border-radius: 40px;
     object-fit: cover;
     background-position: center;
+    box-shadow:rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
 }
 .image{
     width: 100%;
@@ -78,11 +79,94 @@ button{
 }
 .cards:hover{
 border: 10px solid yellowgreen;
-width: 260px;
+width: 250px;
 transition: 0.5s;
 height: 25rem;
 
 }
+
+@media screen and (max-width: 600px) {
+    .navbar {
+        height: 4rem;
+    }
+
+    .subdiv h2 {
+        font-size: 24px;
+    }
+
+    .subdiv a {
+        font-size: 14px;
+        padding-left: 10px;
+        margin-left: 15px;
+    }
+
+    input {
+        margin-left: 10px;
+        width: 180px;
+        height: 18px;
+    }
+
+    .container {
+        display: block;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .cards {
+        width: 90%;
+        height: auto;
+        margin: 10px auto;
+        border-radius: 20px;
+    }
+
+    .cards:hover {
+        width: 95%;
+        border: 5px solid yellowgreen;
+        height: auto;
+    }
+}
+
+@media screen and (min-width: 601px) and (max-width: 1024px) {
+    .navbar {
+        height: 5rem;
+    }
+
+    .subdiv h2 {
+        font-size: 28px;
+    }
+
+    .subdiv a {
+        font-size: 16px;
+        padding-left: 50px;
+        margin-left: 20px;
+    }
+
+    input {
+        margin-left: 20px;
+        width: 200px;
+        height: 20px;
+    }
+
+    .container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .cards {
+        width: 45%;
+        height: auto;
+        margin: 10px;
+        border-radius: 30px;
+    }
+
+    .cards:hover {
+        width: 48%;
+        border: 8px solid yellowgreen;
+        height: auto;
+    }
+}
+
 
 
 
