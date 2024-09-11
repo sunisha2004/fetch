@@ -1,12 +1,12 @@
 let url= window.location.href;
 let urlParams = new URLSearchParams(url.split("?")[1])
 let id=urlParams.get("id")
-
+let data
 console.log(id);
 
 async function getDetails() {
     const res=await fetch(`https://dummyjson.com/products/${id}`);
-    const data=await res.json()
+    data=await res.json()
     console.log(data);
 
     const originalPrice = calculateOriginalPrice(data.price, data.discountPercentage);
@@ -34,7 +34,7 @@ async function getDetails() {
     </div>
     <div id="btns">
         <button id="buy">Buy Now</button>
-    <button id="add">Add to Cart</button>
+    <button id="add" onclick="Addtocart()">Add to Cart</button>
     </div>`
         
     
@@ -49,4 +49,12 @@ function changePic(image){
 }
 function calculateOriginalPrice(discountedPrice, offerPercentage) {
     return discountedPrice / (1 - (offerPercentage / 100));
+}
+
+function Addtocart(){
+    console.log(data);
+    localStorage.setItem(data.id,JSON.stringify(data))
+    window.location.href='./cart.html';
+
+    
 }

@@ -1,4 +1,5 @@
  async function getproducts(){
+    document.getElementById("cart").innerHTML="cart"+localStorage.length
     const res = await fetch("https://dummyjson.com/products");
     if (res.status == 200){
         const data = await res.json();
